@@ -1,4 +1,3 @@
-<!--cabecera-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,34 +7,46 @@
 
 <body>
     <h1>Register</h1>
-    <!--Para especificar lo que pedimos se usa label-->
-    <label>First name:</label>
-    <!--input type es lo que el usario ingresa-->
-    <input type="text" name="first name">
-    <label>Last name:</label>
-    <input type="text" name="last name">
+    <form>
+        <!--Para especificar lo que pedimos se usa label-->
+        <label>First name:</label>
+        <!--input type es lo que el usario ingresa-->
+        <input type="text" name="first name">
+        <label>Last name:</label>
+        <input type="text" name="last name">
 
-    <!--div se usa para separar informacion-->
+        <!--div se usa para separar informacion-->
+        <div>
+            <!--para seleccionar solamente uno usamos el atributo name-->
+            <label>Male</label>
+            <input type="radio" name="gender">
+            <label>Female</label>
+            <input type="radio" name="gender">
+            <label>Other</label>
+            <input type="radio" name="gender">
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="email">
+            <label>Password:</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label>Birthday:</label>
+        </div>
+
+        <!--boton para enviar la informacion-->
+        <!--value es para poner el texto que queremos-->
+        <input type="submit" value="Submit">
+    </form>
+
     <div>
-        <!--para seleccionar solamente uno usamos el atributo name-->
-        <label>Male</label>
-        <input type="radio" name="gender">
-        <label>Female</label>
-        <input type="radio" name="gender">
-        <label>Other</label>
-        <input type="radio" name="gender">
-    </div>
-
-    <label>Email:</label>
-    <input type="email" name="email">
-
-    <a href="index.html">Home</a>
-
+        <a href="index.html">Home</a>
         <p>
-            <a href="https://validator.w3.org/check?uri=referer"><img
-                src="http://www.w3.org/Icons/valid-xhtml10"
-                alt="Valid XHTML 1.0!" height="31" width="88" /></a>
-        </p>   
+            <a href="https://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
+                    alt="Valid XHTML 1.0!" height="31" width="88" /></a>
+        </p>
+    </div>
 </body>
 
 </html>
