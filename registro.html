@@ -9,12 +9,12 @@
     <h1>Register</h1>
     <form method="GET">
         <!--Para especificar lo que pedimos se usa label-->
-        <label for="first name">First name:</label>
+        <label for="first name">First name: *</label>
         <!--input type es lo que el usario ingresa-->
         <!--id se utiliza con el for, que es para especificar que input va con el label correspondiente-->
-        <input type="text" name="first name" id="first name">
+        <input type="text" name="first name" id="first name" required placeholder="Your first name">
         <label for="last name">Last name:</label>
-        <input type="text" name="last name" id="last name">
+        <input type="text" name="last name" id="last name" placeholder="Your last name">
 
         <!--div se usa para separar informacion-->
         <div>
@@ -30,11 +30,56 @@
 
         <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password">
+            <input type="email" name="email" id="email" placeholder="Your email">
+            <label for="password">Password: *</label>
+            <!--required es para campos obligatorios-->
+            <!--placeholder son los mensajes en gris que salen el fondo solo aplica en input-->
+            <!--minleght es para especificar cuantos caracteres se requieren-->
+            <input type="password" name="password" id="password" required placeholder="At least 4 characters" minlength="4">
         </div>
+
+        <div>
+            <label for="birthday">Birthday:</label>
+            <select name="month">
+                <option>Month</option>
+                <option>----</option>
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option value="4">Apr</option>
+                <option value="5">May</option>
+                <option value="6">Jun</option>
+                <option value="7">Jul</option>
+                <option value="8">Aug</option>
+                <option value="9">Sep</option>
+                <option value="10">Oct</option>
+                <option value="11">Nov</option>
+                <option value="12">Dec</option>
+            </select>
+            <select name="day">
+                <option>Day</option>
+                <option>----</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <select name="year">
+                <option value="1">Year</option>
+                <option value="2">1998</option>
+                <option value="3">1999</option>
+                <option value="4">2000</option>
+                <option value="5">2001</option>
+            </select>
+        </div>
+
+        <label for="terms-conditions">I agree to terms and conditions</label>
+        <input id="terms-conditions" type="checkbox">
         
+        <p>
+            *This field is required
+        </p>
         <!--boton para enviar la informacion-->
         <!--value es para poner el texto que queremos-->
         <input type="submit" value="Submit">
